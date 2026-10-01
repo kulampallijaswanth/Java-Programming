@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first word: ");
+        String a = sc.nextLine();
+
+        System.out.print("Enter second word: ");
+        String b = sc.nextLine();
+
+        int i = 0;
+
+        while (i < a.length() && i < b.length()
+                && a.charAt(i) == b.charAt(i)) {
+            i++;
+        }
+
+        System.out.println("Longest Common Prefix: " + a.substring(0, i));
+    }
+}
